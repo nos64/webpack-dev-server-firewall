@@ -21,7 +21,8 @@
   "scripts": {
     "lint": "eslint --cache --ext .ts ./src",
     "build": "tsc",
-    "prepack": "rm -rf public && npm run build"
+    "prepack": "rm -rf public && npm run build",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@funboxteam/eslint-config": "7.4.0",
@@ -34,11 +35,6 @@
     "lint-staged": "15.2.2",
     "typescript": "5.3.3",
     "webpack-dev-server": "5.0.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged -q"
-    }
   },
   "lint-staged": {
     "*.ts": [
